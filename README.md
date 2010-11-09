@@ -11,7 +11,7 @@ The BridgeJS API is inspired on the good parts of [PrototypeJS][2] with some sug
 
 Insert bridge.js after one of the supported frameworks and it'll automatically insert the required adapter scripts to expose the BridgeJS API.
 
-After that you'll be able to do things like `Bridge.$('id').hide()`, `Bridge.$$('div').invoke("setStyle", { opacity: .5 })` and `Function.bind(myFunc, this)` to name a few. At some point I'll probably add some documentation, right now if you want to figure out the API you'll have to work from the existing adapter scripts.
+After that you'll be able to do things like `Bridge.$('id').hide()`, `Bridge.$$('div').invoke("setStyle", { opacity: .5 })` and `Bridge.Function.bind(myFunc, this)` to name a few. At some point I'll probably add some documentation, right now if you want to figure out the API you'll have to work from the existing adapter scripts.
 
 BridgeJS currently provides adapters for the following frameworks:
 
