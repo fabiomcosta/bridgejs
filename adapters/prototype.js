@@ -122,17 +122,17 @@ Object.extend(Bridge, (function() {
       return this.source.match(selector);
     },
 
-    up: function(selector) {
-      return this.source.up(selector);
+    up: function() {
+      return _Element.up.apply(this, [this.source].concat(_slice.call(arguments)));
     },
-    down: function(selector) {
-      return this.source.down(selector);
+    down: function() {
+      return _Element.down.apply(this, [this.source].concat(_slice.call(arguments)));
     },
-    previous: function(selector) {
-      return this.source.previous(selector);
+    previous: function() {
+      return _Element.previous.apply(this, [this.source].concat(_slice.call(arguments)));
     },
-    next: function(selector) {
-      return this.source.next(selector);
+    next: function() {
+      return _Element.next.apply(this, [this.source].concat(_slice.call(arguments)));
     },
     
     // Storage

@@ -228,12 +228,14 @@ jQuery.extend(Bridge, (function($j) {
       return $j(this.source).is(selector);
     },
 
+    // TODO: selector as int
     up: function(selector) {
       var element = selector ?
         $j(this.source).closest(selector)[0] :
         $j(this.source).parent()[0];
       return element;
     },
+    // TODO: down, previous, next
 
     // Storage
     store: function(key, value) {
