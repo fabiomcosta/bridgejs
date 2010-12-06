@@ -199,6 +199,8 @@ jQuery.extend(Bridge, (function($j) {
       };
     })(),
 
+    // TODO: should strip script tags from strings and evaluate those
+    // in global context after inserting the stripped content
     update: function(content) {
       $j(this.source).html(content.source || content);
       return this;
