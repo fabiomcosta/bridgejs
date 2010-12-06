@@ -356,23 +356,25 @@ jQuery.extend(Bridge, (function($j) {
       onComplete:  emptyFunction,
       onSuccess:   emptyFunction,
       onException: emptyFunction,
-      method:      'post'
+      method:      'post',
+      parameters:  ''
     }, arguments[1] || {});
 
     jQuery.ajax({
       url: url,
-      method: this.options.method,
+      data: this.options.parameters,
+      type: this.options.method,
       complete: Bridge.Shared.Function.bind(function(xhr) {
-      if (Object.isFunction(this.options.onComplete))
-        this.options.onComplete(xhr);
+        if (Object.isFunction(this.options.onComplete))
+          this.options.onComplete(xhr);
       }, this),
       success: Bridge.Shared.Function.bind(function(xhr) {
-      if (Object.isFunction(this.options.onSuccess))
-        this.options.onSuccess(xhr);
+        if (Object.isFunction(this.options.onSuccess))
+          this.options.onSuccess(xhr);
       }, this),
       error: Bridge.Shared.Function.bind(function(xhr, textStatus, errorThrown) {
-      if (Object.isFunction(this.options.onException))
-        this.options.onException(xhr, errorThrown);
+        if (Object.isFunction(this.options.onException))
+          this.options.onException(xhr, errorThrown);
       }, this)
     });
   };
