@@ -135,7 +135,7 @@ jQuery.extend(Bridge, (function($j) {
       $j(this.source).addClass(className);
       return this;
     },
-    removeClassName: function() {
+    removeClassName: function(className) {
       $j(this.source).removeClass(className);
       return this;
     },

@@ -39,7 +39,7 @@ Object.extend(Bridge, (function() {
       this.source.addClassName(className);
       return this;
     },
-    removeClassName: function() {
+    removeClassName: function(className) {
       this.source.removeClassName(className);
       return this;
     },
