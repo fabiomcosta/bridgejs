@@ -316,8 +316,15 @@ jQuery.extend(Bridge, (function($j) {
   };
 
   var Array = $j.extend((function() { 
-    function detect(array, object) {
-      return array[$j.inArray(object, array)];
+    function detect(array, iterator, context) {
+      var result;
+      this.each(array, function(value, index) {
+        if (iterator.call(context, value, index)) {
+          result = value;
+          throw Bridge.Shared['break'];
+        }
+      });
+      return result;
     }
 
     function without(array) {

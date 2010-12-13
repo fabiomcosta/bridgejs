@@ -5,6 +5,8 @@ var _slice    = Array.prototype.slice,
     _toString = Object.prototype.toString;
 
 Bridge.Shared = {
+  'break': {},
+
   Array: {
     _each: function(array, iterator) {
       for (var i = 0, length = array.length; i < length; i++)
@@ -13,9 +15,13 @@ Bridge.Shared = {
 
     each: function(array, iterator, context) {
       var index = 0;
-      this._each(array, function(value) {
+      try {
+        this._each(array, function(value) {
           iterator.call(context, value, index++);
-      });
+        });
+      } catch (e) {
+        if (e != Bridge.Shared['break']) throw e;
+      }
     }
   },
 
