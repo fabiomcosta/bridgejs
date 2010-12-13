@@ -142,10 +142,10 @@ jQuery.extend(Bridge, (function($j) {
 
     // Dimensions and positions
     getWidth: function() {
-      return $j(this.source).innerWidth();
+      return $j(this.source).outerWidth();
     },
     getHeight: function() {
-      return $j(this.source).innerHeight();
+      return $j(this.source).outerHeight();
     },
     getDimensions:   function() {
       return {
@@ -160,12 +160,12 @@ jQuery.extend(Bridge, (function($j) {
     },
 
     cumulativeScrollOffset: function() {
-        var element = this.source,
+      var element = this.source,
           valueT = 0, valueL = 0;
       do {
         valueT += element.scrollTop  || 0;
-      valueL += element.scrollLeft || 0;
-      element = element.parentNode;
+        valueL += element.scrollLeft || 0;
+        element = element.parentNode;
       } while (element);
       return _returnOffset(valueL, valueT);
     },
