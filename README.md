@@ -1,7 +1,7 @@
 BridgeJS
 =======
 
-**Note**: BridgeJS is currently in alpha state, use in production **at your own risk** ;P
+**Note**: BridgeJS is currently in alpha state.
 
 BridgeJS aims to make it easy to write JavaScript that'll work with any framework using a [PrototypeJS][2] inspired API. It's created to power some upcoming projects by [Nick Stakenburg][1] and should only be used for that purpose while still in alpha state.
 
