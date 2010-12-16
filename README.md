@@ -17,9 +17,11 @@ BridgeJS currently provides adapters for the following frameworks:
 
 - [PrototypeJS][2]
 - [jQuery][3]
+- [MooTools][4]
 
 Want to help out? Great! Port away and create an adapter for your framework of choice, that way future scripts using BridgeJS will work with your framework!
 
   [1]: http://www.nickstakenburg.com
   [2]: http://www.prototypejs.org
   [3]: http://www.jquery.com
+  [4]: http://mootools.net
